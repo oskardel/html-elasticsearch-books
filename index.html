@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="https://seeklogo.com/images/E/elasticsearch-logo-C75C4578EC-seeklogo.com.png" />
+    <title>Search with Elasticsearch</title>
+</head>
+<body>
+    <select name="search-options" id="search-options">
+        <option value="search_book" selected>Advanced search</option>
+        <option value="book_title">Book title</option>
+        <option value="book_author">Book Author</option>
+        <option value="year_publication">Year of Publication</option>
+        <option value="book_publisher">Publisher</option>
+    </select>
+    <div id="form-div">
+        <input type="text" id="parameters-input" placeholder="Search">
+        <button type="button" id="search-button">Search</button>
+    </div>
+    <div id="card-data"></div>
+</body>
+<script src="script.js"></script>
+</html>

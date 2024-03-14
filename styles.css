@@ -1,0 +1,70 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#card-data {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.book-card {
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.book-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-container {
+  padding: 15px;
+}
+
+.card-container p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.card-container p:first-child {
+  font-weight: bold;
+}
+
+.card-container p span {
+  font-weight: normal;
+  color: #888;
+}
+
+.card-container span {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #888;
+}
+
+@media screen and (max-width: 768px) {
+  .book-card {
+      width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .book-card {
+      width: calc(100% - 20px);
+  }
+}
