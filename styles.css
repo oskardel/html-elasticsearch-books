@@ -8,6 +8,13 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.search-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #card-data {
   display: flex;
   flex-wrap: wrap;

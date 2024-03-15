@@ -1,3 +1,6 @@
+// CHANGE IP IN URL
+// ADD IMAGES BEFORE SEARCHING IN DIV
+// ADD PAGINATION (MAYBE)
 URL = "http://localhost:9200/books_data/_search/template"
 var searchOptions = document.getElementById("search-options")
 const formDiv = document.getElementById("form-div")
@@ -160,8 +163,12 @@ searchOptions.addEventListener("change", function () {
             case "year_publication":
                 year1 = document.getElementById("year1").value
                 year2 = document.getElementById("year2").value
-                parametersArray = [year1, year2]
-                searchByYearOfPublication(parametersArray)
+                if(year1>=year2) {
+                    cardData.innerHTML = `First year must be lower than the second one`
+                } else{
+                    parametersArray = [year1, year2]
+                    searchByYearOfPublication(parametersArray)
+                }
                 break;
             case "book_publisher":
                 searchByPublisher(document.getElementById("parameters-input").value)
@@ -180,5 +187,5 @@ searchOptions.addEventListener("change", function () {
 })
 
 document.getElementById("search-button").addEventListener("click", function () {
-    searchByTitle(searchOptions.value)
+    searchAdvanced(document.getElementById("parameters-input").value)
 })
