@@ -1,77 +1,103 @@
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
-}
-
-input[type=number] {
-  -moz-appearance: textfield;
+  padding: 0;
+  background-color: #f0f0f0; /* Changed background color */
 }
 
 .search-div {
+  text-align: center;
+  margin-top: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+.input-div {
+  margin-top: 20px;
+}
+
+#form-div {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 200px;
+}
+
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #00448d;
+  cursor: pointer;
 }
 
 #card-data {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.title{
+  font-size: 17px;
+  font-weight: 700;
 }
 
 .book-card {
-  width: calc(33.33% - 20px);
-  margin-bottom: 20px;
+  background-color: #f9f9f9;
   border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  overflow: hidden;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .book-card img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-radius: 5px;
+}
+
+.book-card:hover {
+  cursor: pointer;
+  background-color: #f9f9f9;
+  border: 1px solid #007bff;
 }
 
 .card-container {
-  padding: 15px;
+  padding: 10px;
 }
 
 .card-container p {
-  margin: 0;
-  font-size: 16px;
-}
-
-.card-container p:first-child {
-  font-weight: bold;
-}
-
-.card-container p span {
-  font-weight: normal;
-  color: #888;
+  margin: 5px 0;
 }
 
 .card-container span {
-  display: block;
-  margin-top: 10px;
+  color: gray;
   font-size: 14px;
-  color: #888;
 }
 
-@media screen and (max-width: 768px) {
-  .book-card {
-      width: calc(50% - 20px);
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .book-card {
-      width: calc(100% - 20px);
-  }
+.error-message {
+  color: red;
+  text-align: center;
 }
